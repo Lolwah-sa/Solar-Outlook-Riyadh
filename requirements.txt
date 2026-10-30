@@ -1,0 +1,10 @@
+pandas>=2.2,<4
+numpy>=1.26,<3
+scikit-learn>=1.5,<2
+streamlit>=1.40,<2
+plotly>=5.24,<8
+joblib>=1.4,<2
+matplotlib>=3.9,<4
+# Only needed to re-download the data with download_data.py:
+requests>=2.31
+pvlib>=0.11

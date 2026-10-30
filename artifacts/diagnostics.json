@@ -1,0 +1,26 @@
+{
+  "selected_model": "Extra trees",
+  "gain_vs_persistence": {
+    "low_percent": 74.9247435979429,
+    "high_percent": 79.3620699638909,
+    "days": 365,
+    "repetitions": 2000,
+    "seed": 42,
+    "baseline": "Persistence"
+  },
+  "gain_vs_clear_sky_persistence": {
+    "low_percent": 48.9035389499939,
+    "high_percent": 55.158449676571685,
+    "days": 365,
+    "repetitions": 2000,
+    "seed": 42,
+    "baseline": "Clear-sky persistence"
+  },
+  "sky_day_counts": {
+    "Clear (kt >= 0.9)": 214,
+    "Partly hazy (0.7-0.9)": 120,
+    "Dusty/cloudy (kt < 0.7)": 31
+  },
+  "importance_method": "Permutation importance (MAE increase, kW) on 3,000 daylight hours of validation year 2022; model fitted on 2019-2021",
+  "capacity_kW": 5.0
+}

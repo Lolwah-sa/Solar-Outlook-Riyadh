@@ -1,0 +1,226 @@
+{
+  "source_file": "saudi_solar_riyadh_2019_2023.csv",
+  "sha256": "02724eede6a13a322a928e9892802e01e77753274ac024a8a614f98ee58b8fd2",
+  "rows": 43821,
+  "start": "2019-01-01 03:00:00",
+  "end": "2023-12-31 23:00:00",
+  "duplicate_timestamps": 0,
+  "missing_hours": 0,
+  "missing_values": {
+    "ghi": 0,
+    "ghi_clearsky": 0,
+    "dni": 0,
+    "dhi": 0,
+    "temp_c": 0,
+    "rel_humidity": 0,
+    "wind_speed": 0,
+    "pressure_kpa": 0,
+    "actual_kw": 0
+  },
+  "negative_values": {
+    "ghi": 0,
+    "ghi_clearsky": 0,
+    "dni": 0,
+    "dhi": 0,
+    "rel_humidity": 0,
+    "wind_speed": 0,
+    "pressure_kpa": 0,
+    "actual_kw": 0
+  },
+  "power_above_capacity": 0,
+  "ghi_above_clearsky_plus_5pct": 0,
+  "pv_database": [
+    "PVGIS-SARAH3"
+  ],
+  "capacity_kWp": 5.0,
+  "pv_zero_under_sun_set_missing": 43,
+  "pv_zero_under_sun_examples": [
+    "2019-01-16 10:00:00",
+    "2019-02-13 10:00:00",
+    "2019-05-21 10:00:00",
+    "2019-05-22 10:00:00",
+    "2019-06-12 11:00:00"
+  ],
+  "usable_samples": 43575,
+  "feature_count": 26,
+  "feature_table_bytes": 5054700,
+  "feature_table_bytes_if_float64": 9760800,
+  "selected_model": "Extra trees",
+  "selection_rule": "Lowest mean daylight RMSE (= highest mean accuracy) over 3 yearly chronological folds",
+  "development_years": [
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "test_year": 2023,
+  "development_samples": 34863,
+  "test_samples": 8711,
+  "test_daylight_samples": 4360,
+  "horizon": "1 hour ahead",
+  "capacity_kW": 5.0,
+  "tolerances": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "drop_rule": {
+    "relative": 0.2,
+    "absolute_kW": 0.25,
+    "expectation": "clear-sky persistence of current power"
+  },
+  "warnings": [
+    {
+      "model": "Persistence",
+      "precision": 0.030882352941176472,
+      "recall": 0.041501976284584984,
+      "F1": 0.03541315345699832,
+      "events": 506,
+      "confusion_matrix_TN_FP_FN_TP": [
+        3195,
+        659,
+        485,
+        21
+      ],
+      "average_precision": 0.06948191134707037
+    },
+    {
+      "model": "Clear-sky persistence",
+      "precision": 0.0,
+      "recall": 0.0,
+      "F1": 0.0,
+      "events": 506,
+      "confusion_matrix_TN_FP_FN_TP": [
+        3854,
+        0,
+        506,
+        0
+      ],
+      "average_precision": 0.11605504587155964
+    },
+    {
+      "model": "Ridge regression",
+      "precision": 0.6825396825396826,
+      "recall": 0.33992094861660077,
+      "F1": 0.45382585751978893,
+      "events": 506,
+      "confusion_matrix_TN_FP_FN_TP": [
+        3774,
+        80,
+        334,
+        172
+      ],
+      "average_precision": 0.2622407838852534
+    },
+    {
+      "model": "Random forest",
+      "precision": 0.7969543147208121,
+      "recall": 0.6205533596837944,
+      "F1": 0.6977777777777778,
+      "events": 506,
+      "confusion_matrix_TN_FP_FN_TP": [
+        3774,
+        80,
+        192,
+        314
+      ],
+      "average_precision": 0.33869422118576703
+    },
+    {
+      "model": "Extra trees",
+      "precision": 0.800531914893617,
+      "recall": 0.5948616600790514,
+      "F1": 0.6825396825396826,
+      "events": 506,
+      "confusion_matrix_TN_FP_FN_TP": [
+        3779,
+        75,
+        205,
+        301
+      ],
+      "average_precision": 0.3372159743326196
+    },
+    {
+      "model": "Gradient boosting (31 leaves)",
+      "precision": 0.7257281553398058,
+      "recall": 0.5909090909090909,
+      "F1": 0.6514161220043573,
+      "events": 506,
+      "confusion_matrix_TN_FP_FN_TP": [
+        3741,
+        113,
+        207,
+        299
+      ],
+      "average_precision": 0.33924222655293235
+    },
+    {
+      "model": "Gradient boosting (63 leaves)",
+      "precision": 0.715311004784689,
+      "recall": 0.5909090909090909,
+      "F1": 0.6471861471861472,
+      "events": 506,
+      "confusion_matrix_TN_FP_FN_TP": [
+        3735,
+        119,
+        207,
+        299
+      ],
+      "average_precision": 0.33494658516520226
+    }
+  ],
+  "features": [
+    "power",
+    "power_lag_1",
+    "power_lag_2",
+    "power_lag_3",
+    "power_change",
+    "power_lag_24",
+    "ghi",
+    "dni",
+    "dhi",
+    "ghi_clearsky",
+    "temp_c",
+    "rel_humidity",
+    "wind_speed",
+    "pressure_kpa",
+    "kt",
+    "kt_lag_1",
+    "ghi_change",
+    "elev_now",
+    "elev_next",
+    "cs_now",
+    "cs_next",
+    "power_per_cs",
+    "hour_sin",
+    "hour_cos",
+    "doy_sin",
+    "doy_cos"
+  ],
+  "model_pickle_bytes": {
+    "Ridge regression": 1952,
+    "Random forest": 27298337,
+    "Extra trees": 45554084,
+    "Gradient boosting (31 leaves)": 418047,
+    "Gradient boosting (63 leaves)": 1280760
+  },
+  "resources": {
+    "load_audit_features": {
+      "seconds": 0.208,
+      "peak_python_MiB": 25.45
+    },
+    "validation_3_folds": {
+      "seconds": 63.878,
+      "peak_python_MiB": 95.61
+    },
+    "final_fit_2019_2022": {
+      "seconds": 31.008,
+      "peak_python_MiB": 23.46
+    },
+    "test_2023_evaluation": {
+      "seconds": 0.455,
+      "peak_python_MiB": 3.42
+    }
+  },
+  "runtime_seconds": 95.91
+}
