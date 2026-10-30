@@ -1,7 +1,12 @@
-# Solar Outlook Riyadh — 1-hour-ahead PV power forecasting
+# Solar Outlook Riyadh: One Hour Ahead Photovoltaic Power Forecasting and Drop Warnings
 
-**CS316: Introduction to AI and Data Science — Course Project (Term 261)**
-Team: *[Member 1]*, *[Member 2]*, *[Member 3]* · Instructor: Dr. Heyfa Ammar
+**Lolwah Alsaadoun** (223410496) · **Almas Alrasheedi** (223410901) · **Jood Alghamdi** (223410448)
+
+*CS316: Introduction to AI and Data Science — Term 261 · Instructor: Dr. Heyfa Ammar*\
+*Department of Computer Science, Prince Sultan University, Riyadh, Saudi Arabia*
+
+- **Code:** <https://github.com/Lolwah-sa/Solar-Outlook-Riyadh>
+- **Dashboard:** <https://solar-outlook-riyadh.streamlit.app/>
 
 Solar Outlook Riyadh forecasts the output of a 5 kWp photovoltaic (PV) system in **Riyadh, Saudi Arabia**
 **one hour ahead**, and warns about **sudden weather-driven drops** caused by dust or cloud. It uses five
@@ -110,12 +115,10 @@ streamlit run app.py
   - run `python download_data.py`;
   - it needs internet access to `power.larc.nasa.gov` and `re.jrc.ec.europa.eu`.
 
-### Online deployment (Streamlit Community Cloud)
+### Online dashboard (Streamlit Community Cloud)
 
-1. Push this folder to GitHub.
-2. At <https://share.streamlit.io>, choose **Create app → Deploy from GitHub**.
-3. Select the repository, the branch and `app.py`, and choose Python 3.12 or newer.
-4. Make the app public, so the instructor can open it without signing in.
+The dashboard is live at <https://solar-outlook-riyadh.streamlit.app/> (Python 3.13). It is deployed from
+the `main` branch of this repository and updates automatically on every push.
 
 ---
 
@@ -194,9 +197,3 @@ streamlit run app.py
    system for PV power station*, 2013.
 6. IEA, "Saudi National Renewable Energy Program (NREP)," <https://www.iea.org/policies/14658>.
 7. United Nations, "The 17 Sustainable Development Goals," <https://sdgs.un.org/goals>.
-
-## Use of AI
-
-AI assistants (Claude, Anthropic; ChatGPT/Codex, OpenAI) were used for code writing and review, comments,
-the dashboards and drafting documentation. All results come from running this code. The team reviewed,
-tested and takes responsibility for the work. See the report for the full statement.
